@@ -1,0 +1,182 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+*{
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    height: fit-content;
+}
+
+ /* Header */
+header{
+    height:14vh;
+    color:#fff;
+    background-color: rgb(24, 11, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo__container1 h1:hover{
+    font-size:40px;
+    transition: 0.5s;
+}
+
+
+/* Main */
+main{
+    padding:20px 30px;
+    height:fit-content;
+}
+.todo-wrapper{
+    display:grid;
+    grid-template-rows: 1fr 3fr;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+.todo__container2{
+    height:17vh;
+    grid-column: 1/4;
+    grid-row: 1;
+}
+.todo__container2 p{
+    margin: 10px;
+    
+}
+.todo__container2 form{
+    margin: 30px 10px;
+}
+.todo-adder-form input{
+    margin-right:2px ;
+    height:25px;
+
+}
+.todo-entry-box{
+    width:30%;
+}
+
+
+.todo__container3{
+    padding-left: 10px;
+}
+.todo__container3 ol{
+    list-style: none;
+    padding-left: 10px;
+    padding-top: 20px;
+    border: solid#000;
+    height:fit-content;
+    min-height: 50vh;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.todo__container3 ol:hover{
+    border: solid rgb(100, 100, 100);
+}
+.todo__container3 li{
+    margin: 10px 0;
+    color: #000;
+    cursor: pointer;
+
+}
+.removerLi{
+    margin: 10px 0;
+    text-decoration-line: line-through;
+    color: rgb(122, 120, 120);
+}
+
+.todo__container4{
+    grid-row: 2;
+    grid-column: 2/3;
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    justify-content: space-around;
+    padding-left: 30px;
+}
+.todo__container4 input{
+    width: 50%;
+}
+.horario{
+    margin:0 4px;
+    width:15%;
+}
+.btn-send{
+    width: 15%;
+}
+
+@media(max-width:720px) {
+    
+    .todo-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .todo__container2{
+        height:max-content;
+        order:-1;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+    }
+    .todo__container2 form{
+        display:flex;
+        justify-content:center;       
+    }
+    .horario{
+        width:110px;
+    }
+    .todo-entry-box{
+        width:200px;
+    }
+    .todo__container3{
+        order: 2;
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+    }
+    /* .todo__container2{
+        width:100%;
+    } */
+    .todo__container4{
+        height:fit-content;
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        order: 0;
+        justify-content:space-around;
+        align-items: center;
+        padding:0;
+    }
+    .todo__container4 button{
+        min-height: max-content;
+        height:35px;
+        width: 110px;
+
+    }
+
+}
+
+@media (max-width:458px){
+    .todo__container2 form{
+        flex-direction: column;
+        width:100%;
+        align-items: center;
+    }
+    .todo__container2 input{
+        margin: 6px 0;
+        width:70%;
+    }
+    .todo__container1 h1{
+        font-size: 30px;
+    }
+    .todo__container1 h1:hover{
+        font-size: 30px ;
+        transition:0s;
+    }
+
+}

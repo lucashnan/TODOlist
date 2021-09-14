@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      <header>
+        <div class="todo__container1">
+            <h1 class="subTitulo">Mis cosas para hacer</h1>
+          </div>
+      </header>
+      <main>
+        <div class="todo-wrapper">
+            <div class="todo__container2">
+                <p><b>Doble click sobre una tarea para marcarla como completa</b></p>
+                <form name="todo-adder" class="todo-adder-form">
+                  <input
+                    type="text-area"
+                    class="todo-entry-box"
+                    placeholder="Añadir tarea aqui.."
+                    required=""
+                  />
+                  <input type="time" class="horario" required="" />
+          
+                  <input type="submit" value="AÑADIR" name="ENVIAR" class="btn-send"/>
+                </form>
+            </div>
+            <div class="todo__container3">
+                <ol id="todo-list"></ol>
+            </div>
+          
+            <div class="todo__container4" id="control-list">
+            <button id="empty-button" class="pretty-button" onclick="deleteAll()">
+                Vaciar lista
+            </button>
+            <button id="save-button" class="pretty-button"  >Guardar lista</button>
+            </div>
+      </main>
+    <script src="ejercicio.js"></script>
+  </body>
+</html>
